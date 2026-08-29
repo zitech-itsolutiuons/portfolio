@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper text-ink dark:bg-ink dark:text-paper antialiased;
+    font-feature-settings: "ss01" on, "ss02" on;
+  }
+
+  ::selection {
+    @apply bg-ink text-paper dark:bg-paper dark:text-ink;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-paper dark:bg-ink;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-mist-300 dark:bg-line-soft;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+
+  :focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+  }
+
+  /* Set by the inline script in app/layout.tsx when the intro has already
+     played this session. Keeps repeat views from flashing the panel. */
+  .preloader-seen #preloader {
+    display: none;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.25em] text-mist-500 dark:text-mist-400;
+  }
+
+  .hairline {
+    @apply border-mist-200 dark:border-line-soft;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 border border-ink dark:border-paper bg-ink text-paper dark:bg-paper dark:text-ink px-6 py-3 font-mono text-xs uppercase tracking-[0.15em] transition-colors hover:bg-paper hover:text-ink dark:hover:bg-ink dark:hover:text-paper;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 border border-mist-300 dark:border-line-soft px-6 py-3 font-mono text-xs uppercase tracking-[0.15em] transition-colors hover:border-ink dark:hover:border-paper;
+  }
+
+  .section-num {
+    @apply font-mono text-xs text-mist-400 dark:text-mist-500;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
