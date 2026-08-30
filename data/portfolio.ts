@@ -3,7 +3,7 @@
 // ────────────────────────────────────────────────────────────
 
 export const profile = {
-  name: "Jordan Cole",
+  name: "Stanley Obi",
   role: "Software & Systems Engineer",
   tagline: "I build and run the systems most people never see.",
   location: "Remote / Available worldwide",
@@ -26,9 +26,9 @@ export const about = {
     "Outside of work I'm usually deep in a personal project, reading changelogs, or automating something that didn't strictly need automating.",
   ],
   stats: [
-    { label: "Years experience", value: "5+" },
-    { label: "Endpoints managed", value: "250+" },
-    { label: "Projects shipped", value: "30+" },
+    { label: "Years experience", value: "10+" },
+    { label: "Endpoints managed", value: "2250+" },
+    { label: "Projects shipped", value: "130+" },
     { label: "Uptime target", value: "99.9%" },
   ],
 };
@@ -65,12 +65,32 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: "Lan CBT Exam Software",
+    title: "Lan CBT Exam Software",
+    year: "2026",
+    description:
+      "An exam software that lets schools change from hand written exams to computer based exams.",
+    tags: ["Node.js","SQlite", "PowerShell", "WebSockets"],
+    repo: "https://github.com/yourhandle/fleet-ops",
+    featured: true,
+  },
+  {
     id: "fleet-ops",
     title: "Fleet Ops Console",
     year: "2026",
     description:
       "An internal dashboard for orchestrating parallel PowerShell remoting jobs across 250+ endpoints — deployment status, live logs, and rollback in one view.",
     tags: ["Next.js", "PowerShell", "WebSockets"],
+    repo: "https://github.com/yourhandle/fleet-ops",
+    featured: true,
+  },
+  {
+    id: "ExamPrep",
+    title: "ExamPrep",
+    year: "2026",
+    description:
+      "A web App that helps student pprepare for examination with corrections and topic based exam preparations.",
+    tags: ["Next.js", "Postgresql", "WebSockets"],
     repo: "https://github.com/yourhandle/fleet-ops",
     featured: true,
   },
@@ -86,6 +106,16 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    id: "Result Checker",
+    title: "Result Checker",
+    year: "2026",
+    description:
+      "A web app for checking exam results with a user-friendly interface, tailored to match the needs of students and educational institutions.",
+    tags: ["Next.js", "PostgreSQL", "WebSockets"],
+    repo: "https://github.com/yourhandle/result-checker",
+    featured: true,
+  },
+  {
     id: "netwatch",
     title: "NetWatch",
     year: "2025",
@@ -93,6 +123,16 @@ export const projects: Project[] = [
       "A lightweight subnet monitor that pings a defined range, flags dropped hosts, and posts alerts to a webhook.",
     tags: ["Python", "Networking", "Automation"],
     repo: "https://github.com/yourhandle/netwatch",
+    featured: true,
+  },
+  {
+    id: "SMS",
+    title: "School Management System",
+    year: "2026",
+    description:
+      "This system help track records for institution from payment to attendance to results for nice record keeping.",
+    tags: ["Next.js", "Postgresql", "WebSockets"],
+    repo: "https://github.com/yourhandle/fleet-ops",
     featured: true,
   },
   {
@@ -119,7 +159,7 @@ export const experience: ExperienceItem[] = [
   {
     id: "exp-1",
     role: "IT Systems Administrator",
-    org: "Company Name",
+    org: "ZiTechurity IT Solutions(Networking Division)",
     period: "2023 — Present",
     summary:
       "Own network infrastructure and endpoint management for a 250+ machine Windows domain environment.",
@@ -132,8 +172,30 @@ export const experience: ExperienceItem[] = [
   {
     id: "exp-2",
     role: "Junior Developer",
-    org: "Previous Company",
+    org: "ZiTechurity IT Solutions(Software Division)",
     period: "2021 — 2023",
+    summary: "Worked across small internal tools and support automation.",
+    highlights: [
+      "Shipped internal tools used by multiple teams",
+      "Learned modern JavaScript and browser-based tooling from the ground up",
+    ],
+  },
+  {
+    id: "exp-3",
+    role: "Senior Web Developer",
+    org: "ZiTechurity IT Solutions(Web Division)",
+    period: "2019 — 2021",
+    summary: "Worked across small internal tools and support automation.",
+    highlights: [
+      "Shipped internal tools used by multiple teams",
+      "Learned modern JavaScript and browser-based tooling from the ground up",
+    ],
+  },
+  {
+    id: "exp-4",
+    role: "Web Designer",
+    org: "ZiTechurity IT Solutions(Web Division)",
+    period: "2017 — 2019",
     summary: "Worked across small internal tools and support automation.",
     highlights: [
       "Shipped internal tools used by multiple teams",
