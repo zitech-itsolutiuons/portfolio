@@ -95,6 +95,16 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    id: "Netadmin Console",
+    title: "Netadmin Console",
+    year: "2026",
+    description:
+      "A web App that give a network administrator a centralized view of their network infrastructure, and lets them automate workflow in a network setting.",
+    tags: ["Python", "SQlite", "WebSockets"],
+    repo: "https://github.com/yourhandle/fleet-ops",
+    featured: true,
+  },
+  {
     id: "grid",
     title: "Grid",
     year: "2025",
